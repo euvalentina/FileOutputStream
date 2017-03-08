@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,11 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    public void ler(View view) {
-
-    }
-
 
     public void criar(View view) {
         try {
@@ -33,5 +31,17 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+
+    public void ler(View view) {
+        try{
+            FileInputStream fis = openFileInput("teste.txt");
+            BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+            
+        } catch (Exception e){
+
+        }
     }
 }
