@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void criar(View view) {
         try {
-            FileOutputStream fos = openFileOutput("texte.txt", MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("teste.txt", MODE_PRIVATE);
             String texto = "Churros";
 
             fos.write(texto.getBytes());
