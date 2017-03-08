@@ -39,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
             FileInputStream fis = openFileInput("teste.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(fis));
 
-            
+            // Lê o arquivo
+            String texto = br.readLine();
+            fis.close();
+            Toast.makeText(this, texto, Toast.LENGTH_SHORT).show();
         } catch (Exception e){
 
         }
